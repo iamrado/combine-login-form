@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0F0BD22614A0DF00E27BD2 /* TimelaneCombine in Frameworks */ = {isa = PBXBuildFile; productRef = 1A0F0BD12614A0DF00E27BD2 /* TimelaneCombine */; };
 		1A6145772600F02F00450F13 /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6145762600F02F00450F13 /* CombineHelpers.swift */; };
 		1AAE604025FFB15800DD87D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE603F25FFB15800DD87D4 /* AppDelegate.swift */; };
 		1AAE604225FFB15800DD87D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE604125FFB15800DD87D4 /* SceneDelegate.swift */; };
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0F0BD22614A0DF00E27BD2 /* TimelaneCombine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,9 @@
 			dependencies = (
 			);
 			name = CombineLoginForm;
+			packageProductDependencies = (
+				1A0F0BD12614A0DF00E27BD2 /* TimelaneCombine */,
+			);
 			productName = CombineLoginForm;
 			productReference = 1AAE603C25FFB15800DD87D4 /* CombineLoginForm.app */;
 			productType = "com.apple.product-type.application";
@@ -116,6 +121,9 @@
 				Base,
 			);
 			mainGroup = 1AAE603325FFB15800DD87D4;
+			packageReferences = (
+				1A0F0BD02614A0DF00E27BD2 /* XCRemoteSwiftPackageReference "TimelaneCombine" */,
+			);
 			productRefGroup = 1AAE603D25FFB15800DD87D4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -295,6 +303,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 623KFYEN4J;
 				INFOPLIST_FILE = CombineLoginForm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -313,6 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 623KFYEN4J;
 				INFOPLIST_FILE = CombineLoginForm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -347,6 +357,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A0F0BD02614A0DF00E27BD2 /* XCRemoteSwiftPackageReference "TimelaneCombine" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/icanzilb/TimelaneCombine";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A0F0BD12614A0DF00E27BD2 /* TimelaneCombine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A0F0BD02614A0DF00E27BD2 /* XCRemoteSwiftPackageReference "TimelaneCombine" */;
+			productName = TimelaneCombine;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1AAE603425FFB15800DD87D4 /* Project object */;
 }

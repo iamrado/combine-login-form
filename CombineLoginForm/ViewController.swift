@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import TimelaneCombine
 
 class ViewController: UIViewController {
     @IBOutlet weak var username: UITextField!
@@ -28,7 +29,9 @@ class ViewController: UIViewController {
         let isValid = isValidUsername.combineLatest(isValidPassword)
             .map { $0 && $1 }
 
-        isValid.assign(to: \.isEnabled, on: loginButton)
+        isValid
+            .lane("isValid")
+            .assign(to: \.isEnabled, on: loginButton)
             .store(in: &cancellables)
 
         let isLoadingSubject = PassthroughSubject<Bool, Never>()
@@ -42,6 +45,7 @@ class ViewController: UIViewController {
                     .handleEvents(receiveCompletion: { _ in isLoadingSubject.send(false) })
                     .eraseToAnyPublisher()
             }
+            .lane("login")
             .share()
             .eraseToAnyPublisher()
 
